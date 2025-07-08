@@ -1,14 +1,76 @@
 
 1) Crie um programa que dado um número imprima a sua tabuada.
 
+const numero = 7; // você pode mudar esse número
+
+console.log(`Tabuada de ${numero}:`);
+for (let i = 1; i <= 10; i++) {
+  console.log(`${numero} x ${i} = ${numero * i}`);
+}
+
+
 2) Crie um programa que seja capaz de percorrer uma lista de números e imprima cada número Par encontrado.
+
+const numeros = [1, 4, 7, 10, 12, 15, 18];
+
+console.log("Números pares encontrados:");
+for (let numero of numeros) {
+  if (numero % 2 === 0) {
+    console.log(numero);
+  }
+}
+
 
 3) Faça um programa que dado uma lista de nomes imprima os nomes que começem com a letra "V".
 
+const nomes = ["Vinicius", "Ana", "Vera", "Carlos", "Vanessa", "Beatriz"];
+
+console.log("Nomes que começam com a letra V:");
+for (let nome of nomes) {
+  if (nome.startsWith("V")) {
+    console.log(nome);
+  }
+}
+
+
 4) Faça um programa que preencha uma lista com todos os números pares contidos no intervalo de 10 a 50;
+
+const pares = [];
+
+for (let i = 10; i <= 50; i++) {
+  if (i % 2 === 0) {
+    pares.push(i);
+  }
+}
+
+console.log("Números pares entre 10 e 50:");
+console.log(pares);
+
 
 5) Dado uma lista com as médias tiradas pelos alunos. Imprima todas as médias que ficaram de recuperação (média < 5).
    Ex de lista = [2, 7, 3, 8, 10, 4]
 
+const medias = [2, 7, 3, 8, 10, 4];
+
+console.log("Médias em recuperação (menor que 5):");
+for (let media of medias) {
+  if (media < 5) {
+    console.log(media);
+  }
+}
+
+
 6) Dado uma lista com as notas tiradas pelos alunos. imprima a maior nota.
    Ex de lista de notas = [2, 7, 3, 8, 10, 4]
+
+const notas = [2, 7, 3, 8, 10, 4];
+
+let maiorNota = notas[0];
+
+for (let nota of notas) {
+  if (nota > maiorNota) {
+    maiorNota = nota;
+  }
+}
+
+console.log("A maior nota é:", maiorNota);
